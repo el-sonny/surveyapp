@@ -32,6 +32,6 @@ a{text-decoration:none;}
 #content .container .poll .range span{width:100%;display:block;text-align:center;color:#979993;font-weight:bold;}
 #content .container .poll .circle{width:55%;padding:25% 0;border-radius:50%;display:block;margin:0 auto;border:20px solid #B7B9B3;background-size:50%;}
 #content .container .poll .circle.select{border-color:#E4C900;}
-#content .container .poll .range:nth-child(1) .circle{background:url(../img/ICON1) white no-repeat center;background-size:50%;}
-#content .container .poll .range:nth-child(2) .circle{background:url(../img/ICON2) white no-repeat center;background-size:50%;}
-#content .container .poll .range:nth-child(3) .circle{background:url(../img/ICON3) white no-repeat center;background-size:50%;}
+#content .container .poll .range:nth-child(1) .circle{background:url(../img/ICON1.png) white no-repeat center;background-size:50%;}
+#content .container .poll .range:nth-child(2) .circle{background:url(../img/ICON2.png) white no-repeat center;background-size:50%;}
+#content .container .poll .range:nth-child(3) .circle{background:url(../img/ICON3.png) white no-repeat center;background-size:50%;}
