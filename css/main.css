@@ -36,7 +36,7 @@ p{line-height:normal;}
 #content .container .poll .range span{width:100%;display:block;text-align:center;color:#979993;font-weight:bold;line-height:normal;font-size:1.2em;margin-top:10px;}
 #content .container .poll .range span + span{margin-top:0;}
 #content .container .poll .circle{width:37%;padding:17% 0;border-radius:50%;display:block;margin:0 auto;border:20px solid rgb(188,190,184);background-size:50%;box-shadow:0px -1px 1px 1px rgb(189,191,185) inset, 0px -1px 3px 2px rgb(173,175,169);}
-#content .container .poll .circle.select{border-color:rgb(250,218,0);box-shadow:0px 0px 5px 2px rgb(229,202,0) inset, 0px -1px 3px 3px rgb(230,207,0);}
+#content .container .poll .circle.select{border-color:rgb(250,218,0);box-shadow:0px 0px 5px 2px rgb(229,202,0) inset, 0px -1px 3px 2px rgb(236,208,0);}
 #content .container .poll .range:nth-child(1) .circle{background:url(../img/ICON1.png) white no-repeat center;background-size:50%;}
 #content .container .poll .range:nth-child(2) .circle{background:url(../img/ICON2.png) white no-repeat center;background-size:50%;}
 #content .container .poll .range:nth-child(3) .circle{background:url(../img/ICON3.png) white no-repeat center;background-size:50%;}
