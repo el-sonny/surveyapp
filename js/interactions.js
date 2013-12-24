@@ -10,10 +10,15 @@ $(function(){
 	
 	$('.range .circle').on('click',function(e){
 		e.preventDefault();
+		var index = $('.box.on').html();
 		$('.range .circle.select').removeClass('select');
 		$(this).addClass('select');
-		score[$('.box.on').html()-1] = $(this).parent().attr('class').split(' ')[1];
-
+		score[index-1] = $(this).parent().attr('class').split(' ')[1];
+		//next
+		setTimeout(function(){
+			var box = $('.box');
+			$(box[index]).trigger('click');	
+		},600)
 	})
 
 
