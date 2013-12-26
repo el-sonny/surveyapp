@@ -22,24 +22,63 @@ $(function(){
 	})
 
 
-	$('.type ul li .text').on('click',function(e){
-		$(this).html('');
-		$(this).off(e);
+	$('.type ul li input').on('click',function(e){
+		$('.type ul li input.on').removeClass('on');
+		$(this).addClass('on');
 	})
 
-	$('.save').on('click',function(e){
+	$('li .save').on('click',function(e){
 		e.preventDefault();
 		//save text
 		score[9] = [];
-		$('.input.text ul li .text').each(saveText);
+		$('.input.text ul li input').each(saveText);
 		score[10] = [];
-		$('.input.save ul li .text').each(saveText);	
+		$('.input.save ul li input').each(saveText);	
 		localStorage[$('.hidden.id').html()] = JSON.stringify(score);
+		window.location = '/index.html';
 	})
 
 	$('.hidden.id').html(localStorage.length)
 
 	$('.box.on').trigger('click');
+
+	$('a[href="#exportar"]').on('click',function(e){
+		e.preventDefault();
+		console.log('asdasda');
+		var csv = '';
+		for(var i in survey){
+			csv += survey[i].en+','
+		}
+		csv = csv.substr(0,csv.length-1);
+		csv +='\n';
+		var data;
+		for(i in localStorage){
+			data = JSON.parse(localStorage[i]);
+			for(var j in data){
+				if(data[j].constructor == Array){
+					data[j] = '"'+data[j].toString() +'"';
+				}
+			}
+			csv += data.toString()+'\n';
+		}
+		var blob = new Blob([csv],{type:'text/csv'}),
+		fileReader = new FileReader();
+		fileReader.onload = function(e){
+			var link = document.createElement('a');
+			link.href = e.target.result;
+			link.target = '_blank';
+			link.download = 'survey.csv';
+			var click = new MouseEvent('click',{
+				view:window,
+				bubbles:true,
+				cancelable:true
+			});
+			link.dispatchEvent(click);
+			window.URL.revokeObjectURL(link.href);
+		};
+		fileReader.readAsDataURL(blob);
+		
+	});
 });
 
 function changeQuestion(index){
@@ -61,5 +100,5 @@ function saveText(i,val){
 	if($(this).parent().parent().parent().parent().hasClass('save')){
 		index = 10;
 	}
-	score[index].push($(val).html());
+	score[index].push($(val).val());
 }

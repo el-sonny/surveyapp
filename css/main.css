@@ -46,8 +46,8 @@ p{line-height:normal;}
 #content .container .input .wrap{width:93%;}
 #content .container .input li{display:inline-block;vertical-align:top;width:49%;margin:2% 0;}
 #content .container .input li .circle{width:11%;padding:0;border-color:transparent;box-shadow:none;background-color:white;margin:0;text-align:center;display:inline-block;border-width:0;font-size:1.5em;color:#BCBEB8;}
-#content .container .input li .text{display:inline-block;width:68%;padding:3% 7%;background-color:white;margin-left:8px;border-radius:4px;color:#BCBEB8;font-weight:bold;}
-#content .container .input li .text.on{background-color:#BCBEB8;color:white;}
+#content .container .input li input{display:inline-block;width:68%;padding:3% 7%;background-color:white;margin-left:8px;border-radius:4px;color:#BCBEB8;font-weight:bold;border:none;}
+#content .container .input li input.on{background-color:#BCBEB8;color:white;}
 #content .container .input li .save{font-size:2.4em;padding:3% 10%;float:right;background:red;border-radius:5px;color:white;background-color:rgb(249,217,0);}
 /*inicio*/
 #wrap.main #header{background-color:transparent;padding-bottom:8%;}
