@@ -74,3 +74,6 @@ p{line-height:normal;}
 .main #content .border-button a:active{background-color:rgb(249,217,0);box-shadow:2px 2px 2px 1px rgb(243,211,3) inset, -1px -1px 2px 1px rgb(243,211,3) inset;}
 body{min-height:488px;}
 .main #content .container{max-width:664px;}
+
+/*show*/
+.main.show #content .container{max-width:800px;}

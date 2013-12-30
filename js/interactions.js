@@ -89,6 +89,7 @@ $(function(){
 		}
 		var temp = JSON.stringify(data),
 		url = "http://yellowadmin.projects.spaceshiplabs.com/api/update/";
+		//url = "http://yellowadmin/api/update/";
 		$.ajax({
 			url: url,
 			crossDomain : true,
