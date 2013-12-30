@@ -18,7 +18,7 @@ $(function(){
 		setTimeout(function(){
 			var box = $('.box');
 			$(box[index]).trigger('click');	
-		},600)
+		},400)
 	})
 
 
@@ -79,6 +79,28 @@ $(function(){
 		fileReader.readAsDataURL(blob);
 		
 	});
+	$('a[href="#actualizar"]').on('click',function(e){
+		e.preventDefault();
+		var data = [],
+		d;
+		for(var i in localStorage){
+			d = JSON.parse(localStorage[i]);
+			data.push(d);
+		}
+		var temp = JSON.stringify(data),
+		url = "http://yellowadmin.projects.spaceshiplabs.com/api/update/";
+		$.ajax({
+			url: url,
+			crossDomain : true,
+			type:'post',
+			dataType : 'jsonp',
+			data : {data:temp}, 
+			success:function(data){console.log(data)}	
+		})
+		
+	});
+
+
 });
 
 function changeQuestion(index){
