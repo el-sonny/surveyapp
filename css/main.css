@@ -28,6 +28,7 @@ p{line-height:normal;}
 #content .container .boxes .box.completed{background-color:rgb(249,217,0);}
 #content .container .boxes .box.on{background-color:#E8EAE5;color:#CDCFC9;}
 #content .container .survey{background-color:#E6E8E2;display:none;padding-bottom:5%;}
+.show #content .container .survey{display:block;}
 #content .container .survey.on{display:block;}
 #content .container p{font-size:1.8em;color:#979993;width:67%;margin:0 auto;text-align:center;padding:1.4em 0 .9em;}
 #content .container hr{width:95%;margin:0 auto;background-color:#90928D;border:none;height:1px;}
@@ -76,4 +77,4 @@ body{min-height:488px;}
 .main #content .container{max-width:664px;}
 
 /*show*/
-.main.show #content .container{max-width:800px;}
+.show #content .container h2{background-color:#E6E8E2;color:#93948F;}
