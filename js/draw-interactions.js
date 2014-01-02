@@ -2,16 +2,6 @@ google.load("visualization", "1", {packages:["corechart"]});
 //google.setOnLoadCallback(drawChart);
 
 $(function(){
-	//draw all questions
-	/*
-	$('.box').on('click',function(e){
-		e.preventDefault();
-		var box = $(this);
-		changeQuestion(box.html());
-		$('.box.on').removeClass('on').addClass('completed');
-		box.addClass('on');
-	});
-	*/
 	$('.box').on('click',function(e){
 		e.preventDefault();
 		$('.box.completed').removeClass('completed');
@@ -33,6 +23,14 @@ $(function(){
 	});
 
 	$('.box.completed').trigger('click');
+
+	$('.up').on('click',function(){
+		$(this).parent().prev()[0].stepUp();
+	});
+
+	$('.down').on('click',function(){
+		$(this).parent().prev()[0].stepDown();
+	});
 });
 
 function drawQuestion(question){

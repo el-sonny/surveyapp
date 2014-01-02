@@ -78,3 +78,17 @@ body{min-height:488px;}
 
 /*show*/
 .show #content .container h2{background-color:#E6E8E2;color:#93948F;}
+
+.show #header{max-width:650px;padding-top:20px;}
+.show #header .logo{width:100%;padding-right:0;}
+.show #header span.logo{margin:0 auto;display:block;float:none;width:200px;}
+
+#header .time{padding-left:19px;display:inline-block;}
+#header .time p + p{position:relative;display:inline-block;border-radius:5px;overflow:hidden;margin-right:10px;}
+#header .time p:last-child{width:90px;}
+#header .arrows{position:absolute;width:33px;height:20px;top:0;right:-3px;background-color:#FFDD02;height:100%}
+
+#header .arrows .up{border:0 solid white;border-right-color:transparent;border-left-color:transparent;border-width:0 6px 10px 5px;display:block;width:0;margin:0 auto;height:10px;margin-bottom:7px;}
+#header .arrows .down{border:0 solid white;border-right-color:transparent;border-left-color:transparent;border-width:10px 5px 0 6px;display:block;width:0;margin:0 auto;}
+#header .time input[type="number"]{padding:8%;font-size:21px;display:block;width:75px;border:none;height:41px;}
+.show #content .container .boxes .box{background-color:#E6E8E2;}
