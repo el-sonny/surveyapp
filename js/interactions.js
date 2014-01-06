@@ -100,7 +100,6 @@ $(function(){
 			dataType : 'jsonp',
 			data : {data:temp}, 
 			success:function(d){
-				//console.log(data,d)
 				for(var i in data){
 					data[i][10][2] = d[i];
 					localStorage[i] = JSON.stringify(data[i])
