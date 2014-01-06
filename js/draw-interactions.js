@@ -6,15 +6,29 @@ $(function(){
 		e.preventDefault();
 		$('.box.completed').removeClass('completed');
 		$(this).addClass('completed');
-		var index = $(this).html();
+		var index = $(this).html(),
+		timeF = $($('.time')[0]),
+		timeT = $($('.time')[1]),
+		timeFrom = "",
+		timeTo = "",
+		separate = "";
+		for(var i=2;i>=0;i--){
+			timeFrom += separate + (timeF.find("input")[i].value).toString();
+			timeTo += separate + (timeT.find("input")[i].value).toString();
+			separate = "-";
+		}
+		console.log(timeFrom,timeTo);
 		url = "http://yellowadmin.projects.spaceshiplabs.com/api/getDataByQuestion/"
+		url = "http://yellowadmin/api/getDataByQuestion/"
 		$.ajax({
 			url: url,
 			crossDomain : true,
 			type:'post',
 			dataType : 'jsonp',
 			data : {
-				question:index
+				question:index,
+				from:timeFrom,
+				to:timeTo
 			}, 
 			success:drawQuestion
 		})
