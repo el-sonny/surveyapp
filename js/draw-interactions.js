@@ -19,7 +19,7 @@ $(function(){
 		}
 		console.log(timeFrom,timeTo);
 		url = "http://yellowadmin.projects.spaceshiplabs.com/api/getDataByQuestion/"
-		url = "http://yellowadmin/api/getDataByQuestion/"
+		//url = "http://yellowadmin/api/getDataByQuestion/"
 		$.ajax({
 			url: url,
 			crossDomain : true,
