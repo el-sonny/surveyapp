@@ -19,7 +19,7 @@ $(function(){
 		}
 		console.log(timeFrom,timeTo);
 		url = "http://yellowadmin.projects.spaceshiplabs.com/api/getDataByQuestion/"
-		//url = "http://yellowadmin/api/getDataByQuestion/"
+		url = "http://yellowadmin/api/getDataByQuestion/"
 		$.ajax({
 			url: url,
 			crossDomain : true,
@@ -50,14 +50,23 @@ $(function(){
 function drawQuestion(question){
 	var data = getQuestionTable(question),
 	options = {
-		pieHole: 0.2,
+		pieHole: 0.5,
 		backgroundColor: 'transparent',
 		colors:['#FFDD02','#DBBE0B','#A38F0A'],
 		pieSliceBorderColor:'none',
-		pieSliceTextStyle:{color:'#888984'}
+		pieSliceTextStyle:{color:'#888984',fontSize:18,fontWeight:'bold'},
+		chartArea:{width:350,height:350,left:90},
+		legend:{
+			textStyle:{
+				fontSize:20,
+				color:'#888984'
+			},
+			position:'right',
+			alignment:'center'
+		},
+		height:300
 	};
 	var chart = new google.visualization.PieChart(document.getElementById('chart'));
-	//color
 	chart.draw(data,options);
 	$('path + text').each(moveText);
 }
@@ -76,11 +85,9 @@ function getQuestionTable(question){
 function moveText(i,select){
 	select = $(select);
 	var svg = $("svg"),
-	svgW = svg.width()- $("rect")[0].width.animVal.value,
+	svgW = 236,
 	x1 = svgW/2, 
-	x2 = svgW,
 	y1 = svg.height()/2,
-	y2 = svg.height(),
 	w = select.attr("x"),
 	h = select.attr("y"),
 	
@@ -97,8 +104,8 @@ function moveText(i,select){
 	console.log(s);
 	var path = select.prev();
 	bounding = path[0].getBoundingClientRect();
-	select.attr("x",parseFloat(w)+(section[s][0]*(30)));
-	select.attr("y",parseFloat(h)+(section[s][1]*(30)));
+	select.attr("x",parseFloat(w)+(section[s][0]*(55)));
+	select.attr("y",parseFloat(h)+(section[s][1]*(55)));
 
 
 }

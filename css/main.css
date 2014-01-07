@@ -135,3 +135,4 @@ border-radius:5px;
 -webkit-border-radius:5px;}
 #header .time input[type="number"].year{width: 80px}
 .show #content .container .boxes .box{background-color:#E6E8E2;}
+.show #content .container .survey .wrap{width:100%;}
