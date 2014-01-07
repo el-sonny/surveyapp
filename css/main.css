@@ -76,7 +76,7 @@ background-image: -webkit-linear-gradient(top, #f9d900, #e0c300);
 background-image: -moz-linear-gradient(top, #f9d900, #e0c300);
 background-image: -ms-linear-gradient(top, #f9d900, #e0c300);
 background-image: -o-linear-gradient(top, #f9d900, #e0c300);
-background-image: linear-gradient(to bottom, #f9d900, #e0c300)
+background-image: linear-gradient(to bottom, #f9d900, #e0c300);
 border-radius:5px;
 -moz-border-radius:5px;
 -webkit-border-radius:5px;}
@@ -120,7 +120,10 @@ body{min-height:488px;}
 #header .times{margin-top: 32px}
 #header .time{padding-left:19px;display:inline-block;}
 #header .time p{font-size: 1.2em}
-#header .time p + p{position:relative;display:inline-block;border-radius:5px;overflow:hidden;margin-right:10px;margin-top: 14px}
+#header .time p + p{position:relative;display:inline-block;overflow:hidden;margin-right:10px;margin-top: 14px;
+border-radius:5px;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;}
 #header .time p:last-child{width:90px;}
 #header .arrows{position:absolute;width:33px;height:20px;top:0;right:-3px;background-color:#FFDD02;height:100%}
 
