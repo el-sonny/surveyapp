@@ -100,7 +100,7 @@ border-radius:5px;
 .main #content .border-button a .text{float:left;display:block;}
 .main #content .border-button a .clear{display:block;}
 .main #content .border-button a .icon{height:9%;width:29%;}
-.main #content .border-button a .text{width:68%;padding-left:3%;text-align:left;font-size:1.7em;margin-top:4%;line-height:normal;}
+.main #content .border-button a .text{width:68%;padding-left:3%;text-align:left;font-size:1.7em;margin-top:6%;line-height:normal;}
 .main #content .border-button a:active , .main #content .border-button a:hover{background-color:#f9d900;box-shadow: none;
 background-image: -webkit-linear-gradient(top, #f9d900, #e0c300);
 background-image: -moz-linear-gradient(top, #f9d900, #e0c300);
