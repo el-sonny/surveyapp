@@ -84,8 +84,11 @@ $(function(){
 		var data = [],
 		d;
 		for(var i in localStorage){
-			d = JSON.parse(localStorage[i]);
-			data.push(d);
+			if(!!parseInt(i)){
+				d = JSON.parse(localStorage[i]);
+				data.push(d);		
+			}
+
 		}
 		var temp = JSON.stringify(data),
 		url = "http://yellowadmin.projects.spaceshiplabs.com/api/update/";
@@ -96,7 +99,12 @@ $(function(){
 			type:'post',
 			dataType : 'jsonp',
 			data : {data:temp}, 
-			success:function(data){console.log(data)}	
+			success:function(d){
+				for(var i in data){
+					data[i][10][2] = d[i];
+					localStorage[i] = JSON.stringify(data[i])
+				}
+			}
 		})
 		
 	});
