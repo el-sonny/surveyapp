@@ -83,7 +83,7 @@ border-radius:5px;
 /*inicio*/
 #wrap.main #header{background-color:transparent;padding: 5% 2%}
 #wrap.main #header .logo{background:url(../img/YT-ICON-2.png) no-repeat;float:none;margin:0 auto;display:block;background-size:100%;width:61%;height:28%;background-position:center;}
-.main #content .border-button{float:left;width:47%;border-style:solid;border-color:rgb(190,191,186);}
+.main #content .border-button{float:left;width:47%;border-style:solid;border-color:rgb(190,191,186);max-width: 326px}
 .main #content .border-button:nth-child(1){border-width:0 1px 1px 0;padding:2% 2% 3% 0%;}
 .main #content .border-button:nth-child(2){border-width:0 0 1px 0;padding:2% 0% 3% 3%;}
 .main #content .border-button:nth-child(3){border-width:0 1px 0 0;padding:3% 2% 0% 0%;}
